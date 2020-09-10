@@ -4,7 +4,7 @@ using UnityEngine;
 
 interface IWeaponDamageModifier 
 {
-    internal StatusSuccessEvents chanceOfSuccessEvents;
+    //internal StatusSuccessEvents chanceOfSuccessEvents;
     public enum StatusSuccessEvents : int
     {
         Lower = 15, 
