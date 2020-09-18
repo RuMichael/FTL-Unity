@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class SEngine : MonoBehaviour, ISystemUpgrade
 {    
-    struct UpgrateSystem
+    struct UpgrateSystem    // она будет отличаться, тк доп свойства у систем разные
     {
         internal int level;
         internal int upgradeCost;
         internal int evasionModifier;
         internal float ftlDriveModifier;
     }
-    string defaultDescription;
     [SerializeField] int systemCost;
     [SerializeField] PrototypeSystems main;
     [SerializeField] List<UpgrateSystem> upgrateSystems = new List<UpgrateSystem>(); 
 
     void Start()
     {
-        upgrateSystems.Add(new UpgrateSystem{level = 1, upgradeCost = 0, evasionModifier = 5, ftlDriveModifier = 1f});
-        upgrateSystems.Add(new UpgrateSystem{level = 2, upgradeCost = 10, evasionModifier = 10, ftlDriveModifier = 1.25f});
-        upgrateSystems.Add(new UpgrateSystem{level = 3, upgradeCost = 15, evasionModifier = 15, ftlDriveModifier = 1.5f});
-        upgrateSystems.Add(new UpgrateSystem{level = 4, upgradeCost = 30, evasionModifier = 20, ftlDriveModifier = 1.75f});
-        upgrateSystems.Add(new UpgrateSystem{level = 5, upgradeCost = 40, evasionModifier = 25, ftlDriveModifier = 2f});
-        upgrateSystems.Add(new UpgrateSystem{level = 6, upgradeCost = 60, evasionModifier = 28, ftlDriveModifier = 2.25f});
-        upgrateSystems.Add(new UpgrateSystem{level = 7, upgradeCost = 80, evasionModifier = 31, ftlDriveModifier = 2.5f});
-        upgrateSystems.Add(new UpgrateSystem{level = 8, upgradeCost = 120, evasionModifier = 35, ftlDriveModifier = 2.75f});
+        int count = 0;
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 0, evasionModifier = 5, ftlDriveModifier = 1f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 10, evasionModifier = 10, ftlDriveModifier = 1.25f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 15, evasionModifier = 15, ftlDriveModifier = 1.5f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 30, evasionModifier = 20, ftlDriveModifier = 1.75f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 40, evasionModifier = 25, ftlDriveModifier = 2f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 60, evasionModifier = 28, ftlDriveModifier = 2.25f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 80, evasionModifier = 31, ftlDriveModifier = 2.5f});
+        upgrateSystems.Add(new UpgrateSystem{level = ++count, upgradeCost = 120, evasionModifier = 35, ftlDriveModifier = 2.75f});
     }
     void Update()
     {

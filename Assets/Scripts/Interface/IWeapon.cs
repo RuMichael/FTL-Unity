@@ -4,5 +4,8 @@ using UnityEngine;
 
 public interface IWeapon 
 {
+    float Reload();
+    int MakeDamage();
+    void AimWeapons();
 
 }

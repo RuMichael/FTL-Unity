@@ -12,13 +12,16 @@ public class Compartment : MonoBehaviour
 
     void Start()
     {
-        
+        oxygen = 100;
     }
     void Update()
     {
         
     }
 
-    delegate void GetDamaged();
-    event GetDamaged notifyDamage;
+    internal delegate void GetDamaged();
+    internal event GetDamaged notifyDamage;
+
+    //огонь и дыры обрабатываются тут
+
 }
